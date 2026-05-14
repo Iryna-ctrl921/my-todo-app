@@ -1,25 +1,25 @@
 import { useState } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskItem from './components/TaskItem';
+import Counter from './components/Counter'; 
+import ShoppingList from './components/ShoppingList';
+import BmiCalculator from './components/BmiCalculator';
 import './App.css';
 
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  // Функція додавання задачі
   const addTask = (text) => {
     const newTask = { id: Date.now(), text, completed: false };
     setTasks([...tasks, newTask]);
   };
 
-  // Перемикання статусу (виконано/не виконано)
   const toggleTask = (id) => {
     setTasks(tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task
     ));
   };
 
-  // Видалення задачі
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
@@ -39,6 +39,13 @@ function App() {
           />
         ))}
       </ul>
+
+      <hr style={{ margin: '40px 0' }} />
+      <Counter />
+      <hr style={{ margin: '40px 0' }} />
+      <ShoppingList />
+      <hr style={{ margin: '40px 0' }} />
+      <BmiCalculator />
     </div>
   );
 }

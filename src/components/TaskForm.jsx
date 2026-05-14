@@ -7,7 +7,7 @@ export default function TaskForm({ addTask }) {
     e.preventDefault();
     if (text.trim() === '') return;
     addTask(text);
-    setText(''); // Очищення поля після додавання
+    setText(''); 
   };
 
   return (
