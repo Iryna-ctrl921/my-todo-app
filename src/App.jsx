@@ -2,8 +2,6 @@ import { useState } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskItem from './components/TaskItem';
 import Counter from './components/Counter'; 
-import ShoppingList from './components/ShoppingList';
-import BmiCalculator from './components/BmiCalculator';
 import './App.css';
 
 function App() {
@@ -42,10 +40,6 @@ function App() {
 
       <hr style={{ margin: '40px 0' }} />
       <Counter />
-      <hr style={{ margin: '40px 0' }} />
-      <ShoppingList />
-      <hr style={{ margin: '40px 0' }} />
-      <BmiCalculator />
     </div>
   );
 }
